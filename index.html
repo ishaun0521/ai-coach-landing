@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI教練：協助企業導入與代管 AI Agent，降低 50% 營運成本，提升 100% 生產力。提供 AI 自動化服務、企業數位轉型顧問。">
+    <meta name="keywords" content="AI Agent 導入, 企業自動化服務, AI 數位轉型, AI CRM, AI 教練, 企業AI應用">
+    <meta name="author" content="AI教練">
+    <meta property="og:title" content="AI教練：協助企業導入與代管 AI Agent">
+    <meta property="og:description" content="助力企業具備 AI 自動化能力，目標降低 50% 營運成本，同時提升 100% 生產力。">
+    <meta property="og:type" content="website">
+    <title>AI教練 | 企業 AI Agent 導入與代管</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-blue': '#002366',
+                        'tech-silver': '#C0C0C0',
+                        'pure-white': '#FFFFFF',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'Noto Sans TC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .gradient-bg {
+            background: linear-gradient(135deg, #002366 0%, #003380 50%, #004499 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 35, 102, 0.15);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-deep-blue">AI教練</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#services" class="text-gray-600 hover:text-deep-blue transition">服務項目</a>
+                <a href="#benefits" class="text-gray-600 hover:text-deep-blue transition">效益分析</a>
+                <a href="#contact" class="text-gray-600 hover:text-deep-blue transition">聯絡我們</a>
+            </div>
+            <a href="#contact" class="bg-deep-blue text-white px-6 py-2 rounded-lg hover:bg-blue-900 transition">
+                立即諮詢
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-6xl mx-auto px-4 py-20 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                AI教練：協助企業導入與代管 AI Agent
+            </h1>
+            <p class="text-xl md:text-2xl text-tech-silver mb-10 max-w-3xl mx-auto">
+                助力企業具備 AI 自動化能力，目標降低 50% 營運成本，同時提升 100% 生產力
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#contact" class="bg-white text-deep-blue px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg">
+                    立即諮詢
+                </a>
+                <a href="#services" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 transition">
+                    了解更多
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-deep-blue mb-4">中小企業的 AI 困境</h2>
+            <p class="text-gray-600 text-center mb-16 max-w-2xl mx-auto">許多企業想導入 AI，卻面臨重重困難</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Pain Point 1 -->
+                <div class="bg-red-50 rounded-2xl p-8 text-center card-hover">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">沒有 IT 團隊</h3>
+                    <p class="text-gray-600">沒有足夠預算聘請專職 IT 人員，無法自行開發與維護 AI 系統</p>
+                </div>
+                
+                <!-- Pain Point 2 -->
+                <div class="bg-red-50 rounded-2xl p-8 text-center card-hover">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">缺乏 AI 應用知識</h3>
+                    <p class="text-gray-600">不知道 AI 可以如何幫助業務，擔心技術門檻太高無法上手</p>
+                </div>
+                
+                <!-- Pain Point 3 -->
+                <div class="bg-red-50 rounded-2xl p-8 text-center card-hover">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">擔心失敗風險</h3>
+                    <p class="text-gray-600">導入新技術失敗代價高，不知道如何評估 ROI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Comparison -->
+    <section id="benefits" class="py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-deep-blue mb-4">AI Agent vs 傳統人力</h2>
+            <p class="text-gray-600 text-center mb-16">體驗 AI 自動化帶來的巨大差異</p>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Traditional -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-600 mb-8 text-center">傳統人力模式</h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-center border-b pb-4">
+                            <span class="text-gray-600">人力成本</span>
+                            <span class="text-2xl font-bold text-red-600">高</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b pb-4">
+                            <span class="text-gray-600">響應速度</span>
+                            <span class="text-2xl font-bold text-red-600">慢</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b pb-4">
+                            <span class="text-gray-600">工作時長</span>
+                            <span class="text-2xl font-bold text-red-600">8小時</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b pb-4">
+                            <span class="text-gray-600">擴展性</span>
+                            <span class="text-2xl font-bold text-red-600">低</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">錯誤率</span>
+                            <span class="text-2xl font-bold text-red-600">高</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- AI Agent -->
+                <div class="bg-deep-blue rounded-2xl p-8 shadow-lg transform scale-105">
+                    <h3 class="text-2xl font-bold text-white mb-8 text-center">AI Agent 自動化</h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-center border-b border-blue-700 pb-4">
+                            <span class="text-tech-silver">人力成本</span>
+                            <span class="text-2xl font-bold text-green-400">-50%</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-blue-700 pb-4">
+                            <span class="text-tech-silver">響應速度</span>
+                            <span class="text-2xl font-bold text-green-400">立即</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-blue-700 pb-4">
+                            <span class="text-tech-silver">工作時長</span>
+                            <span class="text-2xl font-bold text-green-400">24/7</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-blue-700 pb-4">
+                            <span class="text-tech-silver">擴展性</span>
+                            <span class="text-2xl font-bold text-green-400">高</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-tech-silver">錯誤率</span>
+                            <span class="text-2xl font-bold text-green-400">低</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-deep-blue mb-2">50%</div>
+                    <div class="text-gray-600">成本降低</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-deep-blue mb-2">100%</div>
+                    <div class="text-gray-600">產能提升</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-deep-blue mb-2">24/7</div>
+                    <div class="text-gray-600">不間斷服務</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-deep-blue mb-2">90%</div>
+                    <div class="text-gray-600">錯誤減少</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-deep-blue mb-4">服務三大支柱</h2>
+            <p class="text-gray-600 text-center mb-16">從諮詢到落地，我們提供全方位服務</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gradient-to-b from-gray-50 to-white rounded-2xl p-8 border card-hover">
+                    <div class="w-14 h-14 bg-deep-blue rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">策略諮詢</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• AI 應用評估與規劃</li>
+                        <li>• 業務流程診斷</li>
+                        <li>• ROI 效益分析</li>
+                        <li>• 導入路線圖設計</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-gradient-to-b from-gray-50 to-white rounded-2xl p-8 border card-hover">
+                    <div class="w-14 h-14 bg-deep-blue rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Agent 客製開發</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• 企業專屬 AI Agent</li>
+                        <li>• CRM 系統整合</li>
+                        <li>• 自動化流程設計</li>
+                        <li>• 資料庫建置 (LanceDB)</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-gradient-to-b from-gray-50 to-white rounded-2xl p-8 border card-hover">
+                    <div class="w-14 h-14 bg-deep-blue rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">長期運維代管</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• 系統監控與維護</li>
+                        <li>• 效能優化調校</li>
+                        <li>• 定期更新升級</li>
+                        <li>• 7x24 技術支援</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-deep-blue mb-16">導入流程</h2>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <!-- Step 1 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-deep-blue text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">1</div>
+                    <h3 class="font-semibold text-gray-800 mb-2">免費諮詢</h3>
+                    <p class="text-gray-600 text-sm max-w-[150px]">了解您的業務需求與痛點</p>
+                </div>
+                
+                <!-- Arrow -->
+                <div class="hidden md:block text-deep-blue text-2xl">→</div>
+                
+                <!-- Step 2 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-deep-blue text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">2</div>
+                    <h3 class="font-semibold text-gray-800 mb-2">方案規劃</h3>
+                    <p class="text-gray-600 text-sm max-w-[150px]">制定專屬 AI 導入計畫</p>
+                </div>
+                
+                <!-- Arrow -->
+                <div class="hidden md:block text-deep-blue text-2xl">→</div>
+                
+                <!-- Step 3 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-deep-blue text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">3</div>
+                    <h3 class="font-semibold text-gray-800 mb-2">開發部署</h3>
+                    <p class="text-gray-600 text-sm max-w-[150px]">在 Zeabur 上建置系統</p>
+                </div>
+                
+                <!-- Arrow -->
+                <div class="hidden md:block text-deep-blue text-2xl">→</div>
+                
+                <!-- Step 4 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-deep-blue text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">4</div>
+                    <h3 class="font-semibold text-gray-800 mb-2">教育訓練</h3>
+                    <p class="text-gray-600 text-sm max-w-[150px]">教會您團隊使用 AI 工具</p>
+                </div>
+                
+                <!-- Arrow -->
+                <div class="hidden md:block text-deep-blue text-2xl">→</div>
+                
+                <!-- Step 5 -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">5</div>
+                    <h3 class="font-semibold text-gray-800 mb-2">持續支援</h3>
+                    <p class="text-gray-600 text-sm max-w-[150px]">長期維運與優化服務</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="gradient-bg py-20">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">準備好開始 AI 轉型了嗎？</h2>
+            <p class="text-tech-silver text-lg mb-10 max-w-2xl mx-auto">
+                我們是 AI 教練，協助你用 AI 來降低一半成本、提高兩倍產能；而在你學會之後，可以不需要依賴我們。
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="mailto:contact@aicoach.tw" class="bg-white text-deep-blue px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg">
+                    立即諮詢
+                </a>
+                <span class="text-tech-silver py-4">或</span>
+                <a href="tel:+886912345678" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 transition">
+                    電話聯繫
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">AI教練</h3>
+                    <p class="text-gray-400">協助企業導入 AI 自動化<br>讓您專注核心業務</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">服務項目</h4>
+                    <ul class="text-gray-400 space-y-2">
+                        <li>策略諮詢</li>
+                        <li>Agent 客製開發</li>
+                        <li>長期運維代管</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">聯絡我們</h4>
+                    <ul class="text-gray-400 space-y-2">
+                        <li>Email: contact@aicoach.tw</li>
+                        <li>電話: +886 9XX XXX XXXX</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; 2026 AI教練. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
