@@ -1,441 +1,327 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI教練：協助企業導入與代管 AI Agent，降低 50% 營運成本，提升 100% 生產力。提供 AI 自動化服務、企業數位轉型顧問。">
-    <meta name="keywords" content="AI Agent 導入, 企業自動化服務, AI 數位轉型, AI CRM, AI 教練, 企業AI應用">
-    <meta name="author" content="AI教練">
-    <meta property="og:title" content="AI教練：協助企業導入與代管 AI Agent">
-    <meta property="og:description" content="助力企業具備 AI 自動化能力，目標降低 50% 營運成本，同時提升 100% 生產力。">
-    <meta property="og:type" content="website">
-    <title>AI教練 | 企業 AI Agent 導入與代管</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'deep-blue': '#002366',
-                        'tech-silver': '#C0C0C0',
-                        'pure-white': '#FFFFFF',
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'Noto Sans TC', 'sans-serif'],
-                    }
-                }
-            }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAIO AI 教練｜教你打造自己的 AI Agent、OpenClaw 建置與 AI Agent 代管</title>
+  <meta name="description" content="CAIO 提供 AI 教練服務，教你用 AI 工具打造自己的 AI Agent，透過 OpenClaw 建置、AI Agent 顧問與後續代管，幫助你降低成本、加速產出、建立可持續的 AI 工作流。" />
+  <meta name="keywords" content="AI 教練, AI Agent, OpenClaw, AI agent 代管, AI 顧問, AI 自動化, AI 工具教學, AI SEO, 企業 AI 導入, 個人 AI 助理" />
+  <meta name="author" content="CAIO AI 教練" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://caio.com.tw/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:site_name" content="CAIO AI 教練" />
+  <meta property="og:title" content="CAIO AI 教練｜教你打造自己的 AI Agent、OpenClaw 建置與 AI Agent 代管" />
+  <meta property="og:description" content="不是只幫你導入 AI，而是教你學會自己用 AI 工具打造 Agent，並提供 OpenClaw 建置與後續代管，幫助你降低成本、提高產量。" />
+  <meta property="og:url" content="https://caio.com.tw/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CAIO AI 教練｜教你打造自己的 AI Agent、OpenClaw 建置與 AI Agent 代管" />
+  <meta name="twitter:description" content="用 AI 工具打造自己的 Agent，從教學、建置到代管，讓個人與企業真正把 AI 變成生產力。" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0f172a',
+            ink: '#1e293b',
+            soft: '#f8fafc',
+            brand: '#2563eb',
+            brand2: '#0ea5e9',
+            accent: '#14b8a6'
+          },
+          fontFamily: {
+            sans: ['Inter', 'Noto Sans TC', 'sans-serif']
+          },
+          boxShadow: {
+            soft: '0 20px 60px rgba(15,23,42,.08)'
+          }
         }
-    </script>
-    <style>
-        html { scroll-behavior: smooth; }
-        .gradient-bg {
-            background: linear-gradient(135deg, #002366 0%, #003380 50%, #004499 100%);
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .hero-bg {
+      background:
+        radial-gradient(circle at top right, rgba(14,165,233,.18), transparent 30%),
+        radial-gradient(circle at top left, rgba(37,99,235,.18), transparent 35%),
+        linear-gradient(135deg, #0f172a 0%, #111827 45%, #172554 100%);
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "CAIO AI 教練",
+    "url": "https://caio.com.tw/",
+    "description": "提供 AI 教練、OpenClaw 建置、AI Agent 顧問與 AI Agent 代管服務，協助個人與企業打造自己的 AI Agent 與自動化工作流。",
+    "knowsAbout": ["AI Agent", "OpenClaw", "AI 教練", "AI 自動化", "AI SEO", "企業 AI 導入"],
+    "areaServed": "TW"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "AI 教練與 OpenClaw 建置服務",
+    "provider": {
+      "@type": "Organization",
+      "name": "CAIO AI 教練"
+    },
+    "areaServed": "TW",
+    "description": "教你用 AI 工具打造自己的 AI Agent，並提供 OpenClaw 建置、流程設計與後續代管服務。"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "什麼是 AI 教練服務？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI 教練服務不是只幫你做一次性導入，而是協助你理解如何使用 AI 工具、建立自己的 AI Agent 與工作流，讓你之後能持續自行優化。"
         }
-        .card-hover {
-            transition: all 0.3s ease;
+      },
+      {
+        "@type": "Question",
+        "name": "你們目前提供哪些 AI 服務？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "目前主打服務包含：OpenClaw 建置、AI Agent 顧問、AI 工具教學、流程優化與 AI Agent 代管。"
         }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 35, 102, 0.15);
+      },
+      {
+        "@type": "Question",
+        "name": "OpenClaw 建置適合誰？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "適合希望建立自己的 AI 助理、多 agent 協作系統、個人知識工作流或企業內部自動化流程的人。"
         }
-    </style>
+      }
+    ]
+  }
+  </script>
 </head>
-<body class="font-sans text-gray-800 bg-gray-50">
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-deep-blue">AI教練</div>
-            <div class="hidden md:flex space-x-8">
-                <a href="#services" class="text-gray-600 hover:text-deep-blue transition">服務項目</a>
-                <a href="#benefits" class="text-gray-600 hover:text-deep-blue transition">效益分析</a>
-                <a href="#contact" class="text-gray-600 hover:text-deep-blue transition">聯絡我們</a>
-            </div>
-            <a href="#contact" class="bg-deep-blue text-white px-6 py-2 rounded-lg hover:bg-blue-900 transition">
-                立即諮詢
-            </a>
-        </div>
-    </nav>
+<body class="bg-soft text-ink font-sans">
+  <header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <a href="#top" class="font-extrabold tracking-tight text-xl text-navy">CAIO<span class="text-brand">.</span></a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-600">
+        <a href="#services" class="hover:text-brand">服務項目</a>
+        <a href="#why" class="hover:text-brand">適合誰</a>
+        <a href="#process" class="hover:text-brand">合作流程</a>
+        <a href="#faq" class="hover:text-brand">常見問題</a>
+      </nav>
+      <a href="#contact" class="inline-flex items-center rounded-xl bg-brand px-5 py-2.5 text-white font-semibold hover:bg-blue-700">預約諮詢</a>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="gradient-bg min-h-screen flex items-center pt-20">
-        <div class="max-w-6xl mx-auto px-4 py-20 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                AI教練：協助企業導入與代管 AI Agent
-            </h1>
-            <p class="text-xl md:text-2xl text-tech-silver mb-10 max-w-3xl mx-auto">
-                助力企業具備 AI 自動化能力，目標降低 50% 營運成本，同時提升 100% 生產力
-            </p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="#contact" class="bg-white text-deep-blue px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg">
-                    立即諮詢
-                </a>
-                <a href="#services" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 transition">
-                    了解更多
-                </a>
-            </div>
+  <main id="top">
+    <section class="hero-bg text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm mb-6">AI 教練｜OpenClaw 建置｜AI Agent 代管</p>
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+            教你打造自己的 <span class="text-cyan-300">AI Agent</span><br />
+            不是只買工具，是真正學會用 AI 提高產量。
+          </h1>
+          <p class="text-lg md:text-xl text-slate-200 leading-8 max-w-2xl mb-8">
+            CAIO 提供 <strong>AI 教練服務</strong>，協助你學會使用 AI 工具、建立自己的 Agent 與工作流。
+            我們也提供 <strong>OpenClaw 建置</strong>、<strong>AI Agent 顧問</strong> 與 <strong>後續代管</strong>，幫助你降低成本、加速產出、把 AI 變成可持續的生產力系統。
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#contact" class="rounded-2xl bg-white px-7 py-4 text-navy font-bold text-center hover:bg-slate-100">我想打造自己的 AI Agent</a>
+            <a href="#services" class="rounded-2xl border border-white/30 px-7 py-4 font-semibold text-center hover:bg-white/10">先看服務內容</a>
+          </div>
+          <div class="grid grid-cols-3 gap-4 mt-10 text-sm">
+            <div class="rounded-2xl bg-white/10 p-4 border border-white/10"><div class="text-2xl font-extrabold">1 對 1</div><div class="text-slate-300 mt-1">AI 教練陪跑</div></div>
+            <div class="rounded-2xl bg-white/10 p-4 border border-white/10"><div class="text-2xl font-extrabold">OpenClaw</div><div class="text-slate-300 mt-1">專屬 Agent 建置</div></div>
+            <div class="rounded-2xl bg-white/10 p-4 border border-white/10"><div class="text-2xl font-extrabold">代管</div><div class="text-slate-300 mt-1">後續維運與優化</div></div>
+          </div>
         </div>
+        <div class="bg-white text-slate-900 rounded-3xl p-8 shadow-soft">
+          <p class="text-sm font-semibold text-brand mb-3">你現在需要的，通常不是再多一個工具</p>
+          <h2 class="text-3xl font-bold text-navy mb-4">而是一套能真的落地的 AI 工作系統</h2>
+          <ul class="space-y-4 text-slate-700 leading-7">
+            <li>• 不知道怎麼開始用 AI 做內容、客服、研究、行政、自動化</li>
+            <li>• 工具買了很多，但沒有整體流程，最後還是回到手動作業</li>
+            <li>• 想打造自己的 AI Agent，卻不知道架構、資料、成本與維運怎麼管</li>
+            <li>• 希望未來能自己掌握，不想永遠依賴外包</li>
+          </ul>
+          <div class="mt-6 rounded-2xl bg-slate-50 p-5 border border-slate-200">
+            <p class="font-semibold text-navy mb-2">CAIO 的做法：</p>
+            <p class="text-slate-700">先教你理解，再幫你建置；先讓你有成果，再幫你建立可持續運作的 AI 系統。</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Pain Points Section -->
+    <section class="py-20 bg-white" id="why">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-14">
+          <p class="text-brand font-semibold mb-3">適合誰</p>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-navy mb-5">如果你想用 AI 降低成本、提高產量，這個服務就是為你設計的</h2>
+          <p class="text-lg text-slate-600 leading-8">我們不是賣一套抽象口號，而是幫你把 AI 變成可操作的日常工作能力。</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <article class="rounded-3xl bg-slate-50 p-8 border border-slate-200 shadow-soft">
+            <h3 class="text-xl font-bold text-navy mb-4">一人公司 / 顧問 / 創作者</h3>
+            <p class="text-slate-600 leading-7">想用 AI 建立內容產出、研究整理、行政助理與客戶跟進流程，但不想陷入工具海。</p>
+          </article>
+          <article class="rounded-3xl bg-slate-50 p-8 border border-slate-200 shadow-soft">
+            <h3 class="text-xl font-bold text-navy mb-4">中小企業負責人</h3>
+            <p class="text-slate-600 leading-7">希望在不大量擴編的前提下，用 AI 提升營運效率、建立標準流程與內部知識系統。</p>
+          </article>
+          <article class="rounded-3xl bg-slate-50 p-8 border border-slate-200 shadow-soft">
+            <h3 class="text-xl font-bold text-navy mb-4">想建立專屬 AI 助理的人</h3>
+            <p class="text-slate-600 leading-7">你已經知道 AI 有價值，現在要的是自己的 OpenClaw、自己的 Agent、自己的工作流與後續代管方案。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-14">
+          <p class="text-brand font-semibold mb-3">服務項目</p>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-navy mb-5">目前 CAIO 主打的 AI 教練與 OpenClaw 服務</h2>
+          <p class="text-lg text-slate-600 leading-8">從學會使用 AI，到建立自己的 Agent，再到後續代管，我們把整條路走完。</p>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-8">
+          <article class="rounded-3xl bg-white p-8 border border-slate-200 shadow-soft">
+            <div class="text-sm font-bold text-brand mb-3">01</div>
+            <h3 class="text-2xl font-extrabold text-navy mb-4">AI 教練服務</h3>
+            <p class="text-slate-600 leading-7 mb-5">協助你理解 AI 工具怎麼選、怎麼串、怎麼用在自己的工作裡，不只是操作教學，而是建立可反覆使用的工作方法。</p>
+            <ul class="space-y-2 text-slate-700">
+              <li>• AI 工具選型與工作流設計</li>
+              <li>• 個人 / 團隊使用情境拆解</li>
+              <li>• 內容、生產、研究、行政等流程優化</li>
+              <li>• 建立你自己能持續使用的 AI 方法論</li>
+            </ul>
+          </article>
+          <article class="rounded-3xl bg-white p-8 border border-slate-200 shadow-soft">
+            <div class="text-sm font-bold text-brand mb-3">02</div>
+            <h3 class="text-2xl font-extrabold text-navy mb-4">OpenClaw 專屬建置</h3>
+            <p class="text-slate-600 leading-7 mb-5">目前主打服務：代為建立你自己的 OpenClaw，幫你打造可多 agent 協作、可累積記憶、可擴充流程的 AI 系統。</p>
+            <ul class="space-y-2 text-slate-700">
+              <li>• OpenClaw 環境建置與設定</li>
+              <li>• 多 Agent 架構規劃</li>
+              <li>• SOP / Skills / 任務流程整理</li>
+              <li>• 備份、還原、日常維運骨架建立</li>
+            </ul>
+          </article>
+          <article class="rounded-3xl bg-white p-8 border border-slate-200 shadow-soft">
+            <div class="text-sm font-bold text-brand mb-3">03</div>
+            <h3 class="text-2xl font-extrabold text-navy mb-4">AI Agent 顧問與代管</h3>
+            <p class="text-slate-600 leading-7 mb-5">當你不想自己扛全部維運，我們可提供 AI Agent 代管、優化與迭代，讓系統持續演進，而不是建完就停。</p>
+            <ul class="space-y-2 text-slate-700">
+              <li>• AI Agent 維運與問題排查</li>
+              <li>• 使用策略優化與效能調整</li>
+              <li>• 協作流程設計與角色分工</li>
+              <li>• 後續擴編與工作邊界調整</li>
+            </ul>
+          </article>
+          <article class="rounded-3xl bg-gradient-to-br from-blue-600 to-cyan-500 p-8 text-white shadow-soft">
+            <div class="text-sm font-bold text-blue-100 mb-3">核心價值</div>
+            <h3 class="text-2xl font-extrabold mb-4">你買到的不是一個工具，而是一個會幫你長期省成本的系統</h3>
+            <ul class="space-y-3 text-blue-50">
+              <li>• 更快完成重複工作</li>
+              <li>• 建立可持續的 AI 生產流程</li>
+              <li>• 減少人工協調與知識散落</li>
+              <li>• 讓 AI 逐步變成你自己的營運能力</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-deep-blue mb-4">中小企業的 AI 困境</h2>
-            <p class="text-gray-600 text-center mb-16 max-w-2xl mx-auto">許多企業想導入 AI，卻面臨重重困難</p>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Pain Point 1 -->
-                <div class="bg-red-50 rounded-2xl p-8 text-center card-hover">
-                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">沒有 IT 團隊</h3>
-                    <p class="text-gray-600">沒有足夠預算聘請專職 IT 人員，無法自行開發與維護 AI 系統</p>
-                </div>
-                
-                <!-- Pain Point 2 -->
-                <div class="bg-red-50 rounded-2xl p-8 text-center card-hover">
-                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">缺乏 AI 應用知識</h3>
-                    <p class="text-gray-600">不知道 AI 可以如何幫助業務，擔心技術門檻太高無法上手</p>
-                </div>
-                
-                <!-- Pain Point 3 -->
-                <div class="bg-red-50 rounded-2xl p-8 text-center card-hover">
-                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">擔心失敗風險</h3>
-                    <p class="text-gray-600">導入新技術失敗代價高，不知道如何評估 ROI</p>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-14">
+          <p class="text-brand font-semibold mb-3">為什麼這頁對 AI SEO / SEO 更友善</p>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-navy mb-5">我們把你真正想賣的內容，直接寫給人看，也寫給搜尋引擎看</h2>
         </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6"><h3 class="font-bold text-navy mb-3">明確主題</h3><p class="text-slate-600 leading-7">首頁直接聚焦 AI 教練、OpenClaw 建置、AI Agent 代管，不再太泛。</p></div>
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6"><h3 class="font-bold text-navy mb-3">自然關鍵字</h3><p class="text-slate-600 leading-7">將 AI Agent、AI 教練、企業 AI 導入、AI 自動化、OpenClaw 等詞自然放進標題與段落。</p></div>
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6"><h3 class="font-bold text-navy mb-3">FAQ 結構</h3><p class="text-slate-600 leading-7">加入常見問題與 schema，讓搜尋與 AI 摘要工具更容易理解服務內容。</p></div>
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6"><h3 class="font-bold text-navy mb-3">可延伸內容</h3><p class="text-slate-600 leading-7">未來可繼續拆成服務頁、案例頁、教學頁與部落格，累積長尾流量。</p></div>
+        </div>
+      </div>
     </section>
 
-    <!-- Market Crisis Section (Fear-based) -->
-    <section class="py-20 bg-gray-900 text-white">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-orange-500">你的競爭對手正在進化，而你還在原地踏步嗎？</h2>
-            
-            <div class="space-y-6 mb-10">
-                <p class="text-xl text-gray-300">明明看到 AI 的巨大潛力，卻不知道從何開始？</p>
-                <p class="text-xl text-gray-300">眼睜睜看著對手透過 AI 自動化降低成本、蠶食你的市場份額？</p>
-                <p class="text-2xl font-semibold text-red-400 mt-8">轉型不是選擇題，而是生存戰。每延遲一天，數位鴻溝就擴大一倍。</p>
-            </div>
-            
-            <p class="text-gray-400 mb-8">不轉型的代價，遠高於導入的成本。</p>
-            
-            <a href="#contact" class="inline-block bg-orange-500 text-white px-10 py-5 rounded-lg text-xl font-bold hover:bg-orange-600 transition shadow-lg transform hover:scale-105">
-                立即預約「AI 轉型諮詢」
-            </a>
-            <p class="text-gray-500 text-sm mt-4">停止市場流失，從這一刻開始</p>
+    <section id="process" class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-14">
+          <p class="text-brand font-semibold mb-3">合作流程</p>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-navy mb-5">從不知道怎麼開始，到擁有自己的 AI Agent 系統</h2>
         </div>
+        <div class="grid md:grid-cols-4 gap-6">
+          <div class="rounded-3xl bg-white p-6 border border-slate-200 shadow-soft"><div class="text-3xl font-extrabold text-brand mb-3">1</div><h3 class="font-bold text-navy mb-3">需求診斷</h3><p class="text-slate-600 leading-7">先盤點你目前工作流程、成本壓力、內容產出與 AI 導入目標。</p></div>
+          <div class="rounded-3xl bg-white p-6 border border-slate-200 shadow-soft"><div class="text-3xl font-extrabold text-brand mb-3">2</div><h3 class="font-bold text-navy mb-3">工具與流程設計</h3><p class="text-slate-600 leading-7">決定哪些任務該交給 AI，哪些流程該自動化，哪些適合用 OpenClaw 承接。</p></div>
+          <div class="rounded-3xl bg-white p-6 border border-slate-200 shadow-soft"><div class="text-3xl font-extrabold text-brand mb-3">3</div><h3 class="font-bold text-navy mb-3">建置與教學</h3><p class="text-slate-600 leading-7">幫你建環境、建 Agent、寫 SOP，同時讓你學會如何自己使用與擴充。</p></div>
+          <div class="rounded-3xl bg-white p-6 border border-slate-200 shadow-soft"><div class="text-3xl font-extrabold text-brand mb-3">4</div><h3 class="font-bold text-navy mb-3">代管與優化</h3><p class="text-slate-600 leading-7">如果你需要，我們再接手後續代管、效能優化與新功能擴編。</p></div>
+        </div>
+      </div>
     </section>
 
-    <!-- Benefits Comparison -->
-    <section id="benefits" class="py-20 bg-gray-100">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-deep-blue mb-4">AI Agent vs 傳統人力</h2>
-            <p class="text-gray-600 text-center mb-16">體驗 AI 自動化帶來的巨大差異</p>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Traditional -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg">
-                    <h3 class="text-2xl font-bold text-gray-600 mb-8 text-center">傳統人力模式</h3>
-                    <div class="space-y-6">
-                        <div class="flex justify-between items-center border-b pb-4">
-                            <span class="text-gray-600">人力成本</span>
-                            <span class="text-2xl font-bold text-red-600">高</span>
-                        </div>
-                        <div class="flex justify-between items-center border-b pb-4">
-                            <span class="text-gray-600">響應速度</span>
-                            <span class="text-2xl font-bold text-red-600">慢</span>
-                        </div>
-                        <div class="flex justify-between items-center border-b pb-4">
-                            <span class="text-gray-600">工作時長</span>
-                            <span class="text-2xl font-bold text-red-600">8小時</span>
-                        </div>
-                        <div class="flex justify-between items-center border-b pb-4">
-                            <span class="text-gray-600">擴展性</span>
-                            <span class="text-2xl font-bold text-red-600">低</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-gray-600">錯誤率</span>
-                            <span class="text-2xl font-bold text-red-600">高</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- AI Agent -->
-                <div class="bg-deep-blue rounded-2xl p-8 shadow-lg transform scale-105">
-                    <h3 class="text-2xl font-bold text-white mb-8 text-center">AI Agent 自動化</h3>
-                    <div class="space-y-6">
-                        <div class="flex justify-between items-center border-b border-blue-700 pb-4">
-                            <span class="text-tech-silver">人力成本</span>
-                            <span class="text-2xl font-bold text-green-400">-50%</span>
-                        </div>
-                        <div class="flex justify-between items-center border-b border-blue-700 pb-4">
-                            <span class="text-tech-silver">響應速度</span>
-                            <span class="text-2xl font-bold text-green-400">立即</span>
-                        </div>
-                        <div class="flex justify-between items-center border-b border-blue-700 pb-4">
-                            <span class="text-tech-silver">工作時長</span>
-                            <span class="text-2xl font-bold text-green-400">24/7</span>
-                        </div>
-                        <div class="flex justify-between items-center border-b border-blue-700 pb-4">
-                            <span class="text-tech-silver">擴展性</span>
-                            <span class="text-2xl font-bold text-green-400">高</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-tech-silver">錯誤率</span>
-                            <span class="text-2xl font-bold text-green-400">低</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Stats -->
-            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="text-4xl md:text-5xl font-bold text-deep-blue mb-2">50%</div>
-                    <div class="text-gray-600">成本降低</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl md:text-5xl font-bold text-deep-blue mb-2">100%</div>
-                    <div class="text-gray-600">產能提升</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl md:text-5xl font-bold text-deep-blue mb-2">24/7</div>
-                    <div class="text-gray-600">不間斷服務</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl md:text-5xl font-bold text-deep-blue mb-2">90%</div>
-                    <div class="text-gray-600">錯誤減少</div>
-                </div>
-            </div>
+    <section id="faq" class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <p class="text-brand font-semibold mb-3">FAQ</p>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-navy mb-5">常見問題</h2>
         </div>
+        <div class="space-y-5">
+          <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-6 open:bg-white">
+            <summary class="font-bold text-navy cursor-pointer">你們是幫我做，還是教我自己做？</summary>
+            <p class="mt-4 text-slate-600 leading-7">兩者都有。CAIO 的核心不是只代做，而是讓你之後也能自己理解、操作與擴充。若你需要，我們也能接續代管。</p>
+          </details>
+          <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-6 open:bg-white">
+            <summary class="font-bold text-navy cursor-pointer">OpenClaw 建置適合完全不懂技術的人嗎？</summary>
+            <p class="mt-4 text-slate-600 leading-7">可以。你不一定要自己從零寫程式，但需要一套可理解的架構。我們會把工具、流程、維運與角色分工整理成你能掌握的方式。</p>
+          </details>
+          <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-6 open:bg-white">
+            <summary class="font-bold text-navy cursor-pointer">AI Agent 代管包含什麼？</summary>
+            <p class="mt-4 text-slate-600 leading-7">可能包含 Agent 維運、設定調整、流程優化、備份/還原、SOP 管理、協作設計與後續擴編。實際內容依你的工作場景而定。</p>
+          </details>
+          <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-6 open:bg-white">
+            <summary class="font-bold text-navy cursor-pointer">為什麼這跟一般 AI 顧問不一樣？</summary>
+            <p class="mt-4 text-slate-600 leading-7">很多 AI 顧問停在簡報與概念，但 CAIO 更強調可實作、可教學、可維運、可持續擴充，讓你不是只買到一次性建議，而是建立長期能力。</p>
+          </details>
+        </div>
+      </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-deep-blue mb-4">服務三大支柱</h2>
-            <p class="text-gray-600 text-center mb-16">從諮詢到落地，我們提供全方位服務</p>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="bg-gradient-to-b from-gray-50 to-white rounded-2xl p-8 border card-hover">
-                    <div class="w-14 h-14 bg-deep-blue rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">策略諮詢</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li>• AI 應用評估與規劃</li>
-                        <li>• 業務流程診斷</li>
-                        <li>• ROI 效益分析</li>
-                        <li>• 導入路線圖設計</li>
-                    </ul>
-                </div>
-                
-                <!-- Service 2 -->
-                <div class="bg-gradient-to-b from-gray-50 to-white rounded-2xl p-8 border card-hover">
-                    <div class="w-14 h-14 bg-deep-blue rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Agent 客製開發</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li>• 企業專屬 AI Agent</li>
-                        <li>• CRM 系統整合</li>
-                        <li>• 自動化流程設計</li>
-                        <li>• 資料庫建置 (LanceDB)</li>
-                    </ul>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="bg-gradient-to-b from-gray-50 to-white rounded-2xl p-8 border card-hover">
-                    <div class="w-14 h-14 bg-deep-blue rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">長期運維代管</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li>• 系統監控與維護</li>
-                        <li>• 效能優化調校</li>
-                        <li>• 定期更新升級</li>
-                        <li>• 7x24 技術支援</li>
-                    </ul>
-                </div>
-            </div>
+    <section id="contact" class="py-20 bg-navy text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-cyan-300 font-semibold mb-3">下一步</p>
+        <h2 class="text-3xl md:text-5xl font-extrabold mb-6">如果你想打造自己的 AI Agent，現在就開始</h2>
+        <p class="text-lg text-slate-300 leading-8 mb-10">不論你是想先學會用 AI、想建自己的 OpenClaw，還是想找人接手 AI Agent 代管，都可以先從一次對話開始。</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="mailto:hello@caio.com.tw" class="rounded-2xl bg-white px-8 py-4 text-navy font-bold">寄信諮詢</a>
+          <a href="https://caio.com.tw/" class="rounded-2xl border border-white/30 px-8 py-4 font-semibold">CAIO.com.tw</a>
         </div>
+      </div>
     </section>
+  </main>
 
-    <!-- Process Section -->
-    <section class="py-20 bg-gray-100">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-deep-blue mb-16">導入流程</h2>
-            
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-                <!-- Step 1 -->
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-deep-blue text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">1</div>
-                    <h3 class="font-semibold text-gray-800 mb-2">免費諮詢</h3>
-                    <p class="text-gray-600 text-sm max-w-[150px]">了解您的業務需求與痛點</p>
-                </div>
-                
-                <!-- Arrow -->
-                <div class="hidden md:block text-deep-blue text-2xl">→</div>
-                
-                <!-- Step 2 -->
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-deep-blue text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">2</div>
-                    <h3 class="font-semibold text-gray-800 mb-2">方案規劃</h3>
-                    <p class="text-gray-600 text-sm max-w-[150px]">制定專屬 AI 導入計畫</p>
-                </div>
-                
-                <!-- Arrow -->
-                <div class="hidden md:block text-deep-blue text-2xl">→</div>
-                
-                <!-- Step 3 -->
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-deep-blue text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">3</div>
-                    <h3 class="font-semibold text-gray-800 mb-2">開發部署</h3>
-                    <p class="text-gray-600 text-sm max-w-[150px]">在 Zeabur 上建置系統</p>
-                </div>
-                
-                <!-- Arrow -->
-                <div class="hidden md:block text-deep-blue text-2xl">→</div>
-                
-                <!-- Step 4 -->
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-deep-blue text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">4</div>
-                    <h3 class="font-semibold text-gray-800 mb-2">教育訓練</h3>
-                    <p class="text-gray-600 text-sm max-w-[150px]">教會您團隊使用 AI 工具</p>
-                </div>
-                
-                <!-- Arrow -->
-                <div class="hidden md:block text-deep-blue text-2xl">→</div>
-                
-                <!-- Step 5 -->
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">5</div>
-                    <h3 class="font-semibold text-gray-800 mb-2">持續支援</h3>
-                    <p class="text-gray-600 text-sm max-w-[150px]">長期維運與優化服務</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section id="contact" class="gradient-bg py-20">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">準備好開始 AI 轉型了嗎？</h2>
-            <p class="text-tech-silver text-lg mb-10 max-w-2xl mx-auto">
-                我們是 AI 教練，協助你用 AI 來降低一半成本、提高兩倍產能；而在你學會之後，可以不需要依賴我們。
-            </p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="mailto:cheng.brian0418@gmail.com" class="bg-white text-deep-blue px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition shadow-lg">
-                    立即諮詢
-                </a>
-                <span class="text-tech-silver py-4">或</span>
-                <a href="tel:+886912345678" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 transition">
-                    電話聯繫
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-deep-blue mb-4">專業顧問團隊</h2>
-            <p class="text-gray-600 text-center mb-4">專業實戰背景，非單人工作室</p>
-
-            
-            <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-                <!-- Shaun Chen -->
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-40 h-40 rounded-full bg-gray-200 mb-6 flex items-center justify-center overflow-hidden border-4 border-deep-blue">
-                        <svg class="w-20 h-20 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-1">Shaun Chen</h3>
-                    <p class="text-deep-blue font-semibold mb-4">首席顧問</p>
-                    <p class="text-gray-600 text-sm mb-4">Panasonic Taiwan 製造系統中心 部門經理 (Division Director)</p>
-                    <p class="text-gray-500 text-sm mb-6">深耕 ERP 與 MES 系統管理，具備製造業數位轉型實戰經驗。堅持「僕人式領導」，協助企業賦能。</p>
-                    <div class="flex flex-wrap justify-center gap-2">
-                        <span class="bg-deep-blue text-white px-3 py-1 rounded-full text-xs">PMP</span>
-                        <span class="bg-deep-blue text-white px-3 py-1 rounded-full text-xs">AI Academy</span>
-                        <span class="bg-deep-blue text-white px-3 py-1 rounded-full text-xs">ICF ACC</span>
-                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-xs">MES Expert</span>
-                    </div>
-                </div>
-                
-                <!-- Jerry Han -->
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-40 h-40 rounded-full bg-gray-200 mb-6 flex items-center justify-center overflow-hidden border-4 border-deep-blue">
-                        <svg class="w-20 h-20 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-1">Jerry Han (韓)</h3>
-                    <p class="text-deep-blue font-semibold mb-4">AI 技術實作與代管顧問</p>
-                    <p class="text-gray-600 text-sm mb-4">專注於 AI Agent 的開發部署與系統穩定運行</p>
-                    <p class="text-gray-500 text-sm mb-6">確保企業級服務的持續性，提供 7×24 技術支援與維運服務。</p>
-                    <div class="flex flex-wrap justify-center gap-2">
-                        <span class="bg-deep-blue text-white px-3 py-1 rounded-full text-xs">Agent 開發</span>
-                        <span class="bg-deep-blue text-white px-3 py-1 rounded-full text-xs">系統維運</span>
-                        <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-xs">Zeabur 專家</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="grid md:grid-cols-3 gap-8 mb-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">AI教練</h3>
-                    <p class="text-gray-400">協助企業導入 AI 自動化<br>讓您專注核心業務</p>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">服務項目</h4>
-                    <ul class="text-gray-400 space-y-2">
-                        <li>策略諮詢</li>
-                        <li>Agent 客製開發</li>
-                        <li>長期運維代管</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">聯絡我們</h4>
-                    <ul class="text-gray-400 space-y-2">
-                        <li>Email: cheng.brian0418@gmail.com</li>
-                        <li>電話: 0919839959</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
-                <p>&copy; 2026 AI教練. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+  <footer class="border-t border-slate-200 bg-white py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-3 md:items-center md:justify-between text-sm text-slate-500">
+      <p>© 2026 CAIO AI 教練. All rights reserved.</p>
+      <p>關鍵主題：AI 教練、AI Agent、OpenClaw 建置、AI Agent 代管、AI 自動化、AI SEO。</p>
+    </div>
+  </footer>
 </body>
 </html>
