@@ -62,6 +62,7 @@
 - 更新：`/blog/index.html`
 - 視需要更新：`/index.html`、`/sitemap.xml`
 - **重要**：寫文前先讀 `BLOG-WRITING-GUIDE.md`，了解 CAIO blog 的商業目的、版面格式與 CTA 原則
+- **作者照片規則**：若以團隊成員名義發表，文章內必須放對應成員照片（圖檔放在 `/images/team/`）
 
 ### 修改團隊介紹 / 自我介紹
 - 主要改：`/index.html`
