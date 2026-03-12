@@ -413,6 +413,7 @@ CAIO 的 blog 文章建議結構：
 - 視需要更新 `/sitemap.xml`
 
 **作者照片規則**：若以團隊成員名義發表，文章內**必須**放對應成員照片（圖檔放在 `/images/team/`）
+- **版面格式規則**：務必保持與現有文章一致，請完全遵從 `BLOG-WRITING-GUIDE.md` 中的 HTML 結構與 Tailwind CSS class，**不要自行修改格式**
 
 ---
 

@@ -149,6 +149,8 @@ OpenClaw / AI agent 在寫文前，先回答這幾題：
 CAIO blog 目前最適合的格式，是：
 **清楚、長文型、帶作者區塊、帶 CTA 的文章頁**。
 
+**重要：請務必保持與現有文章的版面格式一致。** 不要自創新格式，也不要把視覺設計改成不同的風格。
+
 建議結構如下：
 
 ### 5.1 頁首 metadata
@@ -169,6 +171,142 @@ CAIO blog 目前最適合的格式，是：
 **重要：若文章以團隊成員名義發表，文章內應放對應成員照片。**
 
 這是 CAIO 網站的已知規則，請務必遵守。
+
+---
+
+### 5.3 現有文章版面格式分析（請務必完全遵守）
+
+以下是目前 CAIO blog 文章的標準版面格式，**請在新增文章時完全遵從這個格式，不要自行修改或省略任何元素**：
+
+#### HTML 結構骨架
+
+```html
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文章標題｜CAIO</title>
+  <meta name="description" content="文章摘要...">
+  <link rel="canonical" href="https://caio.com.tw/blog/文章-slug.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:site_name" content="CAIO">
+  <meta property="og:title" content="文章標題">
+  <meta property="og:description" content="文章摘要...">
+  <meta property="og:url" content="https://caio.com.tw/blog/文章-slug.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "文章標題",
+    "description": "文章摘要...",
+    "author": {"@type": "Person", "name": "作者姓名"},
+    "publisher": {"@type": "Organization", "name": "CAIO", "url": "https://caio.com.tw"},
+    "mainEntityOfPage": "https://caio.com.tw/blog/文章-slug.html",
+    "datePublished": "2026-03-12",
+    "dateModified": "2026-03-12",
+    "inLanguage": "zh-Hant-TW"
+  }
+  </script>
+</head>
+<body class="bg-white text-slate-800">
+  <main class="max-w-4xl mx-auto px-6 py-16">
+    <a href="/" class="text-blue-600">← 回首頁</a>
+    <article>
+      <div class="mt-6 mb-4 text-sm font-semibold text-blue-600">CAIO Blog</div>
+      <h1 class="text-4xl md:text-5xl font-extrabold mt-2 mb-6 leading-tight">文章標題</h1>
+      
+      <!-- 作者區塊 -->
+      <div class="flex flex-col sm:flex-row sm:items-center gap-5 mb-10 rounded-2xl border border-slate-200 bg-slate-50 p-5">
+        <img src="/images/team/作者圖檔.jpg" alt="作者姓名" class="w-20 h-20 rounded-full object-cover border-2 border-white shadow">
+        <div>
+          <p class="text-slate-900 font-bold">作者姓名</p>
+          <p class="text-slate-500">職稱｜2026-03-12</p>
+          <p class="text-slate-600 mt-2">一句文章定位說明。</p>
+        </div>
+      </div>
+
+      <!-- 正文 -->
+      <p class="leading-8 mb-6">第一段正文...</p>
+      <p class="leading-8 mb-6">第二段正文...</p>
+
+      <h2 class="text-2xl font-bold mb-4">小標題</h2>
+      <p class="leading-8 mb-6">段落正文...</p>
+
+      <ul class="list-disc pl-6 leading-8 mb-10 space-y-2">
+        <li>條列項目 1</li>
+        <li>條列項目 2</li>
+      </ul>
+
+      <!-- 重點框（淺藍） -->
+      <div class="rounded-2xl bg-blue-50 border border-blue-200 p-8 mb-10">
+        <h2 class="text-2xl font-bold mb-4">重點框標題</h2>
+        <p class="leading-8 text-slate-700">重點內容...</p>
+      </div>
+
+      <!-- CTA 區塊 -->
+      <div class="rounded-2xl bg-blue-50 border border-blue-200 p-8 mb-10">
+        <h2 class="text-2xl font-bold mb-4">CTA 標題</h2>
+        <p class="leading-8 mb-4">CTA 說明...</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/services/ai-coach.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-bold text-center">主按鈕</a>
+          <a href="/services/xxx.html" class="inline-block bg-white border border-blue-200 text-blue-700 px-6 py-3 rounded-xl font-bold text-center">次按鈕</a>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold mb-4">結語</h2>
+      <p class="leading-8 mb-6">結語內容...</p>
+
+      <!-- 延伸閱讀 -->
+      <div class="border-t pt-8 text-slate-600">
+        <p class="mb-3"><strong>延伸閱讀</strong></p>
+        <div class="flex flex-col gap-3">
+          <a href="/services/ai-coach.html" class="text-blue-600">延伸閱讀 1</a>
+          <a href="/blog/xxx.html" class="text-blue-600">延伸閱讀 2</a>
+        </div>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
+```
+
+#### 關鍵格式規則彙整
+
+| 元素 | 格式 class |
+|------|-----------|
+| body | `bg-white text-slate-800` |
+| main container | `max-w-4xl mx-auto px-6 py-16` |
+| 回首頁連結 | `<a href="/" class="text-blue-600">← 回首頁</a>` |
+| 分類標籤 | `class="mt-6 mb-4 text-sm font-semibold text-blue-600"` |
+| h1 標題 | `class="text-4xl md:text-5xl font-extrabold mt-2 mb-6 leading-tight"` |
+| 作者區塊外層 | `class="flex flex-col sm:flex-row sm:items-center gap-5 mb-10 rounded-2xl border border-slate-200 bg-slate-50 p-5"` |
+| 作者頭像 | `class="w-20 h-20 rounded-full object-cover border-2 border-white shadow"` |
+| 作者名字 | `class="text-slate-900 font-bold"` |
+| 職稱日期 | `class="text-slate-500"` |
+| 作者說明 | `class="text-slate-600 mt-2"` |
+| 段落正文 | `class="leading-8 mb-6"` |
+| h2 小標 | `class="text-2xl font-bold mb-4"` |
+| ul 條列 | `class="list-disc pl-6 leading-8 mb-10 space-y-2"` |
+| 重點框（淺藍） | `class="rounded-2xl bg-blue-50 border border-blue-200 p-8 mb-10"` |
+| 重點框（淺灰） | `class="rounded-2xl bg-slate-50 border border-slate-200 p-6 mb-10"` |
+| 主按鈕 | `class="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-bold text-center"` |
+| 次按鈕 | `class="inline-block bg-white border border-blue-200 text-blue-700 px-6 py-3 rounded-xl font-bold text-center"` |
+| 延伸閱讀區塊 | `class="border-t pt-8 text-slate-600"` |
+| 延伸閱讀連結 | `class="text-blue-600"` |
+
+#### 圖片路徑規則
+- 團隊成員照片目錄：`/images/team/`
+- 已知圖檔：`shaun.jpg`, `eagle.jpg`
+- 新圖檔命名：全小寫、簡短，如 `louis.jpg`, `jerry.jpg`
+
+#### 內部連結格式
+- 使用相對路徑，例如：`/services/ai-coach.html`、`/blog/ai-agent-vs-ai-tool.html`
+- canonical 與 og:url 必須使用完整網址
 
 建議包含：
 - 作者照片（`/images/team/` 目錄下的對應圖檔）
