@@ -6,6 +6,7 @@
 
 1. `AGENTS.md`（本檔）
 2. `OPENCLAW-WEBSITE-HANDBOOK.md`
+3. `BLOG-WRITING-GUIDE.md`（若要寫 blog 文章）
 
 讀完再開始修改。
 
@@ -31,6 +32,7 @@
 
 詳細規則都在：
 - `OPENCLAW-WEBSITE-HANDBOOK.md`
+- `BLOG-WRITING-GUIDE.md`（若要新增或修改 blog 文章）
 
 裡面已經整理好：
 - 網站結構
@@ -59,6 +61,7 @@
 - 新增：`/blog/*.html`
 - 更新：`/blog/index.html`
 - 視需要更新：`/index.html`、`/sitemap.xml`
+- **重要**：寫文前先讀 `BLOG-WRITING-GUIDE.md`，了解 CAIO blog 的商業目的、版面格式與 CTA 原則
 
 ### 修改團隊介紹 / 自我介紹
 - 主要改：`/index.html`
