@@ -25,6 +25,7 @@
     screenWidth: window.screen.width,
     screenHeight: window.screen.height,
     language: navigator.language || 'unknown',
+    pageVariant: window.CAIO_PAGE_VARIANT || 'default'
   };
 
   function sendEvent(eventType, eventData) {
@@ -43,6 +44,7 @@
         height: sessionInfo.screenHeight,
       },
       language: sessionInfo.language,
+      page_variant: sessionInfo.pageVariant,
       event_data: eventData || {},
     };
 
