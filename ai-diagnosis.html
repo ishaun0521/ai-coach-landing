@@ -34,7 +34,7 @@
 </head>
 <body class="bg-soft text-ink font-sans">
   <main class="max-w-5xl mx-auto px-6 py-16">
-    <a href="/landing-v2.html" class="text-blue-600">← 回首頁</a>
+    <a href="/" class="text-blue-600">← 回首頁</a>
 
     <section class="mt-8 rounded-3xl bg-white border border-slate-200 p-8 md:p-12 shadow-soft">
       <p class="text-sm font-semibold text-brand mb-3">AI 導入診斷</p>
@@ -112,6 +112,36 @@
           </select>
         </div>
         <div>
+          <label class="block text-sm font-semibold text-slate-700 mb-2">團隊規模（選填）</label>
+          <select name="team_size" class="w-full rounded-2xl border border-slate-300 px-4 py-3 bg-white">
+            <option value="">請選擇</option>
+            <option>1 人</option>
+            <option>2–5 人</option>
+            <option>6–20 人</option>
+            <option>21–100 人</option>
+            <option>100 人以上</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-slate-700 mb-2">你希望的時程（選填）</label>
+          <select name="timeline" class="w-full rounded-2xl border border-slate-300 px-4 py-3 bg-white">
+            <option value="">請選擇</option>
+            <option>希望 1–2 週內開始</option>
+            <option>希望 1 個月內開始</option>
+            <option>希望 1–3 個月內開始</option>
+            <option>先理解，不急著開始</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-slate-700 mb-2">預算 / 投入意願（選填）</label>
+          <select name="budget" class="w-full rounded-2xl border border-slate-300 px-4 py-3 bg-white">
+            <option value="">請選擇</option>
+            <option>先了解，再決定</option>
+            <option>願意先從小規模開始</option>
+            <option>有明確預算，想直接規劃</option>
+          </select>
+        </div>
+        <div>
           <label class="block text-sm font-semibold text-slate-700 mb-2">補充說明（選填）</label>
           <textarea name="notes" rows="4" class="w-full rounded-2xl border border-slate-300 px-4 py-3" placeholder="例如：使用過哪些工具、目前團隊規模、想先改善哪個流程... "></textarea>
         </div>
@@ -142,13 +172,17 @@
       const role = fd.get('role') || '';
       const pain = fd.get('pain') || '';
       const need = fd.get('need') || '';
+      const teamSize = fd.get('team_size') || '';
+      const timeline = fd.get('timeline') || '';
+      const budget = fd.get('budget') || '';
       const notes = fd.get('notes') || '';
 
       const subject = encodeURIComponent('AI 導入診斷需求');
       const body = encodeURIComponent(
-`來自網站的 AI 導入診斷需求\n\n稱呼：${name}\n聯絡方式：${contact}\n角色：${role}\n目前最卡的問題：\n${pain}\n\n目前偏向的需求：${need}\n\n補充說明：\n${notes}\n\n來源：/ai-diagnosis.html\nvariant=diagnosis_page`
+`來自網站的 AI 導入診斷需求\n\n稱呼：${name}\n聯絡方式：${contact}\n角色：${role}\n目前最卡的問題：\n${pain}\n\n目前偏向的需求：${need}\n團隊規模：${teamSize}\n希望時程：${timeline}\n預算/投入意願：${budget}\n\n補充說明：\n${notes}\n\n來源：/ai-diagnosis.html\nvariant=diagnosis_page`
       );
       window.location.href = `mailto:aicoach@caio.com.tw?subject=${subject}&body=${body}`;
+      setTimeout(function(){ window.location.href = '/thank-you.html'; }, 800);
     });
   </script>
   <script src="/assets/tracking.js"></script>
