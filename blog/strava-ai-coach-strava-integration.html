@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strava 與 AI 教練的整合：讓數據教練你自己｜CAIO Blog</title>
+  <meta name="description" content="分享如何用 OpenClaw + Strava API 打造個人 AI 教練系統，自動追蹤訓練數據、生成分析報告、規劃每週訓練課表。">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:title" content="Strava 與 AI 教練的整合：讓數據教練你自己">
+  <meta property="og:description" content="用 OpenClaw + Strava API 打造個人 AI 教練系統，自動追蹤訓練、生成報告、規劃課表。">
+  <meta property="og:url" content="https://caio.com.tw/blog/strava-ai-coach-strava-integration.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://caio.com.tw/blog/strava-ai-coach-strava-integration.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', 'Noto Sans TC', sans-serif; }
+    .prose { line-height: 1.9; font-size: 1.1rem; }
+    .prose h2 { font-size: 1.6rem; font-weight: 800; margin-top: 2.5rem; margin-bottom: 1rem; }
+    .prose h3 { font-size: 1.25rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; }
+    .prose p { margin-bottom: 1.25rem; }
+    .prose ul { margin: 1rem 0 1.5rem 1.5rem; }
+    .prose li { margin-bottom: 0.5rem; }
+    .prose code { background: #f1f5f9; padding: 0.2em 0.4em; border-radius: 4px; font-size: 0.9em; }
+    .prose pre { background: #1e293b; color: #e2e8f0; padding: 1.25rem; border-radius: 0.75rem; overflow-x: auto; margin: 1.5rem 0; }
+    .prose pre code { background: none; padding: 0; color: inherit; }
+    .prose blockquote { border-left: 4px solid #2563eb; padding-left: 1.25rem; margin: 1.5rem 0; font-style: italic; color: #64748b; }
+    .hero-gradient {
+      background: linear-gradient(135deg, #0f172a 0%, #1e40af 50%, #0f172a 100%);
+    }
+    .code-block { font-family: 'Fira Code', 'Cascadia Code', monospace; font-size: 0.85rem; }
+    .metric-card { background: linear-gradient(135deg, #eff6ff, #f0f9ff); border: 1px solid #bfdbfe; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <a href="/" class="font-extrabold tracking-tight text-xl text-slate-900">CAIO<span class="text-blue-600">.</span></a>
+      <nav class="flex items-center gap-6 text-sm">
+        <a href="/blog/" class="text-slate-600 hover:text-blue-600 font-medium">← Blog</a>
+        <a href="/#services" class="text-slate-600 hover:text-blue-600">服務</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero-gradient text-white py-16 px-4">
+      <div class="max-w-3xl mx-auto">
+        <div class="flex items-center gap-2 mb-6">
+          <span class="bg-blue-500/30 text-blue-200 text-xs font-bold px-3 py-1 rounded-full">技術實作</span>
+          <span class="text-blue-300 text-sm">2026-03-25</span>
+        </div>
+        <h1 class="text-3xl md:text-4xl font-extrabold leading-tight mb-4">
+          Strava 與 AI 教練的整合：讓數據教練你自己
+        </h1>
+        <p class="text-blue-100 text-lg leading-relaxed">
+          這篇文章記錄我用 OpenClaw + Strava API 打造個人 AI 教練系統的完整過程。從自動抓取訓練數據、生成每週分析報告，到規劃未來四週的訓練課表——全部不需要訂閱任何付費服務，兩小時搞定。
+        </p>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <article class="max-w-3xl mx-auto px-4 py-12">
+      <div class="prose text-slate-700">
+
+<h2>前言：為什麼要把 Strava 變成教練？</h2>
+<p>我從 2022 年開始認真跑步，2024 年開始騎車。用了 Strava 超過三年，它記錄了我的每一筆數據——但記錄完之後呢？</p>
+<p>多數業餘運動者的痛點不是沒有數據，而是：</p>
+<ul>
+  <li>每週結束後沒有系統性地回顧訓練量是否足夠</li>
+  <li>不知道自己的疲勞指數是否過高、該不該休息</li>
+  <li>想安排訓練計畫，但從來沒有真的安排過</li>
+  <li>比賽前兩週才發現長距離課表根本還沒跑過</li>
+</ul>
+<p>我需要的是一個會主動提醒我、幫我分析數據、幫我安排課表的「教練」。</p>
+
+<h2>系統架構</h2>
+<p>整個系統由三個核心模組組成：</p>
+
+<div class="metric-card rounded-2xl p-6 my-8">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+    <div>
+      <div class="text-3xl font-extrabold text-blue-700">Strava API</div>
+      <div class="text-sm text-slate-600 mt-1">運動數據來源</div>
+    </div>
+    <div>
+      <div class="text-3xl font-extrabold text-blue-700">OpenClaw</div>
+      <div class="text-sm text-slate-600 mt-1">AI 大腦與排程引擎</div>
+    </div>
+    <div>
+      <div class="text-3xl font-extrabold text-blue-700">LINE / Telegram</div>
+      <div class="text-sm text-slate-600 mt-1">教練訊息推播</div>
+    </div>
+  </div>
+</div>
+
+<h2>Step 1：Strava API 授權設定</h2>
+<p>Strava 提供免費的 OAuth 2.0 API，只要你是運動員本人，就可以申請自己的 API Key。流程很簡單：</p>
+
+<ol style="margin-left:1.5rem; margin-bottom:1.5rem;">
+  <li style="margin-bottom:0.5rem;"><strong>申請 Strava API 應用程式</strong>：<a href="https://www.strava.com/settings/api" class="text-blue-600 underline" target="_blank">strava.com/settings/api</a>，填寫應用程式名稱與描述，Callback URL 填 <code>http://localhost</code></li>
+  <li style="margin-bottom:0.5rem;"><strong>取得 Client ID、Client Secret、Refresh Token</strong></li>
+  <li style="margin-bottom:0.5rem;"><strong>設定 OpenClaw Strava Skill</strong>，把憑證寫入環境變數</li>
+</ol>
+
+<h2>Step 2：自動抓取每筆活動數據</h2>
+<p>用 Strava API 的 <code>/athlete/activities</code> endpoint，我可以抓到所有活動：</p>
+
+<pre class="code-block"><code>GET https://www.strava.com/api/v3/athlete/activities
+?after={timestamp}&per_page=200</code></pre>
+
+<p>回來的資料包括：距離、爬升、心率、配速、功率（騎車）。但重點不是 raw data，而是我設計的幾個關鍵指標：</p>
+
+<ul>
+  <li><strong>TRIMP（訓練負荷）</strong>：根據心率區間計算單次訓練的疲勞指數</li>
+  <li><strong>ATL / CTL / TSB</strong>：急性訓練負荷、慢性訓練負荷、疲勞指數——跑步圈最常用的三條線</li>
+  <li><strong>每週總里程與爬升</strong>：自動彙整，不需要打開 Strava app</li>
+  <li><strong>強度分布</strong>：Easy / Tempo / Threshold / VO2max / Rest 各佔多少 %</li>
+</ul>
+
+<h2>Step 3：教練系統的 Prompt 設計</h2>
+<p>這是核心。我的教練不是只回答「你今天跑了多少」的機器，而是要能：</p>
+
+<pre class="code-block"><code>你是一位專業的鐵人三項教練，服務一位業餘運動員。
+運動員背景：33歲男性，月跑量 150-200km，業餘好手。
+每週一早上 8:00，你要主動提供：
+1. 上週訓練回顧（TRIMP、里程、爬升、強度分布）
+2. 目前疲勞指數分析（ATL/CTL/TSB 三條線的狀態）
+3. 本週訓練建議（哪幾天該練、練什麼、強度多少）
+4. 任何需要注意的警訊（受傷風險、訓練過度）
+
+說話風格：直接、有數據根據、不廢話。像個真正的教練。</code></pre>
+
+<h2>Step 4：每月訓練課表生成</h2>
+<p>每個月第一天，我讓 AI 教練根據當月的目標比賽（大方向）和目前的體能狀態，生成一整個月的訓練規劃。</p>
+
+<blockquote>
+  教練：「根據你的半馬 PB 2:59:02 和目前的月跑量，我建議這個月把重點放在 Zone 2 有氧基礎建設上。週末 LSD 可以拉到 20-22km，但中間配速要壓在 5:30/km 以下。」
+</blockquote>
+
+<h2>實測結果：三週後的變化</h2>
+<p>我跑了三週，用這個系統：</p>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+  <div class="metric-card rounded-2xl p-5">
+    <div class="text-2xl font-extrabold text-blue-800">+18%</div>
+    <div class="text-sm text-slate-600 mt-1">平均每週里程增加</div>
+  </div>
+  <div class="metric-card rounded-2xl p-5">
+    <div class="text-2xl font-extrabold text-blue-800">Zone 2 配速 ↓15s/km</div>
+    <div class="text-sm text-slate-600 mt-1">有氧基礎更扎實</div>
+  </div>
+  <div class="metric-card rounded-2xl p-5">
+    <div class="text-2xl font-extrabold text-blue-800">TSB 常態維持 +15~+25</div>
+    <div class="text-sm text-slate-600 mt-1">比賽日不在疲勞高峰期</div>
+  </div>
+  <div class="metric-card rounded-2xl p-5">
+    <div class="text-2xl font-extrabold text-blue-800">每週主動休息 1 天</div>
+    <div class="text-sm text-slate-600 mt-1">系統自動建議，不是靠意志力</div>
+  </div>
+</div>
+
+<h2>技術細節：OpenClaw 是怎麼做到的</h2>
+<p>很多人在問我用的是什麼平台。答案是 <strong>OpenClaw</strong>——一個開源的 AI 助手框架，支援 Cron 排程、MCP 協定（可以串 Strava、天氣、股價等）、還有很強的 Telegram 整合。</p>
+
+<p>我的 Strava 教練系統本質上是一個 OpenClaw Skill，核心邏輯：</p>
+
+<pre class="code-block"><code>1. Cron job 每小時觸發
+2. 抓取 Strava 新活動（只抓未處理的）
+3. 更新本地數據庫（TRIMP、ATL/CTL/TSB）
+4. 每日早上 9:00 推播教練建議
+5. 每月 1 日生成新訓練課表</code></pre>
+
+<p>整個系統執行起來每個月成本不到 NT$200（API token 費用），等於每個月 200 元請了一個不會累、不會請假的教練。</p>
+
+<h2>結語</h2>
+<p>AI 教練不會取代真正的教練——但對於大多數業餘運動者來說，一個每天會提醒你訓練、每週會幫你回顧數據的 AI 教練，已經比多數人現在有的「教練」（也就是自己）要靠譜得多。</p>
+
+<p>重點是：<strong>系統要真的運作起來，而不是停留在想了三年還沒開始</strong>。這套東西我從想到做到大概花了兩個晚上，如果你有運動習慣，我強烈建議你試試看。</p>
+
+<p>如果需要 CAIO 協助你建置這類系統，歡迎來聊聊。</p>
+
+      </div>
+
+      <!-- Author -->
+      <div class="mt-12 pt-8 border-t border-slate-200 flex items-center gap-4">
+        <img src="/images/team/eagle.jpg" alt="Eagle" class="w-14 h-14 rounded-full object-cover border-2 border-slate-200">
+        <div>
+          <div class="font-bold text-slate-900">Eagle</div>
+          <div class="text-sm text-slate-500">策略顧問 | 半馬 2:59 | 熱愛把教練系統做出來</div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white py-8 mt-12">
+    <div class="max-w-3xl mx-auto px-4 text-center text-sm text-slate-500">
+      <p>© 2026 CAIO｜<a href="https://caio.com.tw" class="text-blue-600 hover:underline">caio.com.tw</a></p>
+    </div>
+  </footer>
+</body>
+</html>
