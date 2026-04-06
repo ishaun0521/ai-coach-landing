@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>績效教練是什麼？用 AI 幫主管追蹤、回饋與提升團隊成效｜CAIO</title>
+  <meta name="description" content="績效教練不是口號，而是一套協助主管追蹤目標、提供回饋、推動改善的成效管理方式。CAIO 聚焦台灣中小企業，協助主管用 AI 建立可追蹤、可改善的日常管理節奏。" />
+  <meta name="keywords" content="績效教練, 團隊管理, 目標追蹤, AI 管理工具, 績效管理, 回饋機制, 中小企業管理, CAIO" />
+  <meta name="author" content="CAIO AI 教練" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://caio.com.tw/performance-coach/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:site_name" content="CAIO AI 教練" />
+  <meta property="og:title" content="績效教練是什麼？用 AI 幫主管追蹤、回饋與提升團隊成效｜CAIO" />
+  <meta property="og:description" content="績效教練不是口號，而是一套協助主管追蹤目標、提供回饋、推動改善的成效管理方式。" />
+  <meta property="og:url" content="https://caio.com.tw/performance-coach/" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = { theme: { extend: { colors: { navy: '#0f172a', ink: '#1e293b', soft: '#f8fafc', brand: '#2563eb', brand2: '#0ea5e9', accent: '#14b8a6' }, fontFamily: { sans: ['Inter', 'Noto Sans TC', 'sans-serif'] }, boxShadow: { soft: '0 20px 60px rgba(15,23,42,.08)' } } } }
+  </script>
+  <style>html { scroll-behavior: smooth; } .hero-bg { background: radial-gradient(circle at top right, rgba(20,184,166,.2), transparent 35%), radial-gradient(circle at bottom left, rgba(37,99,235,.15), transparent 40%), linear-gradient(135deg, #0f172a 0%, #134e4a 100%); }</style>
+</head>
+<body class="bg-soft text-ink font-sans">
+  <header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <a href="/" class="font-extrabold tracking-tight text-xl text-navy">CAIO<span class="text-brand">.</span> <span class="text-sm font-semibold text-slate-500">你的首席AI長</span></a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-600">
+        <a href="/blog/" class="inline-flex items-center rounded-full bg-blue-600 px-4 py-2 font-semibold text-white shadow-sm hover:bg-blue-700">Blog</a>
+        <a href="/digital-employee/" class="hover:text-brand">數位員工</a>
+        <a href="/performance-coach/" class="hover:text-brand font-semibold text-brand">績效教練</a>
+        <a href="/#services" class="hover:text-brand">服務項目</a>
+        <a href="/#process" class="hover:text-brand">合作流程</a>
+        <a href="/#team" class="hover:text-brand">團隊介紹</a>
+        <a href="/#faq" class="hover:text-brand">常見問題</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="/ai-diagnosis.html" class="inline-flex items-center rounded-xl bg-brand px-5 py-2.5 text-white font-semibold hover:bg-blue-700">預約 AI 導入診斷</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <!-- Hero -->
+    <section class="hero-bg text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+        <div class="max-w-4xl">
+          <p class="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm mb-6">📊 績效教練</p>
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">把目標、進度與卡點看清楚，<br>讓團隊的努力<span class="text-cyan-300">更穩定變成結果</span></h1>
+          <p class="text-lg md:text-xl text-slate-200 leading-8 max-w-2xl mb-8">CAIO 的績效教練協助主管建立可追蹤、可回饋、可改善的管理節奏，讓績效管理不再只靠月底檢討、主管硬撐或會議後才發現問題。對中小企業來說，這不是多一套管理口號，而是更早看見偏差、更快做出修正。</p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/ai-diagnosis.html" class="rounded-2xl bg-white px-7 py-4 text-navy font-bold text-center hover:bg-slate-100">預約績效管理診斷</a>
+            <a href="#what-is" class="rounded-2xl border border-white/30 px-7 py-4 font-semibold text-center hover:bg-white/10">了解更多</a>
+          </div>
+          <div class="grid grid-cols-3 gap-4 mt-10 text-sm max-w-lg">
+            <div class="rounded-2xl bg-white/10 p-4 border border-white/10"><div class="text-2xl font-extrabold">中小企</div><div class="text-slate-300 mt-1">業主管適用</div></div>
+            <div class="rounded-2xl bg-white/10 p-4 border border-white/10"><div class="text-2xl font-extrabold">不需先有</div><div class="text-slate-300 mt-1">完整 KPI 系統</div></div>
+            <div class="rounded-2xl bg-white/10 p-4 border border-white/10"><div class="text-2xl font-extrabold">單一團隊</div><div class="text-slate-300 mt-1">即可先行試行</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1: What is it -->
+    <section id="what-is" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-14">
+          <p class="text-teal-600 font-semibold mb-3">績效教練是什麼</p>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-navy mb-5">不只是績效考核，而是一套持續追蹤的管理機制</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="text-lg text-slate-600 leading-8">績效教練不是傳統顧問，也不只是績效考核。它更接近一套<strong>持續追蹤、即時回饋、推動改善</strong>的管理機制，幫主管把團隊從「有在忙」推進到「有穩定結果」。</p>
+            <p class="text-lg text-slate-600 leading-8 mt-4">很多團隊不是不努力，而是目標沒有被持續追蹤、問題沒有被提早看見、回饋沒有形成節奏。績效教練的價值，就是把這些原本靠主管個人撐住的管理動作，變成可以被複製、被維持的系統。</p>
+          </div>
+          <div class="bg-teal-50 rounded-3xl p-8 border border-teal-100">
+            <h3 class="text-xl font-bold text-navy mb-4">績效教練 vs 傳統做法</h3>
+            <ul class="space-y-3 text-slate-700">
+              <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">傳統顧問/培訓</span><span>— 偏一次性建議</span></li>
+              <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">績效考核</span><span>— 偏結果評分</span></li>
+              <li class="flex items-start gap-3"><span class="text-teal-600 font-bold">KPI 系統</span><span>— 偏數字呈現</span></li>
+              <li class="flex items-start gap-3 bg-teal-100 rounded-xl p-3 -mx-1"><span class="text-teal-600 font-bold">績效教練</span><span>— 更接近日常管理節奏的建立與推進</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Pain points -->
+    <section class="py-20 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-14">
+          <p class="text-teal-600 font-semibold mb-3">管理痛點</p>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-navy mb-5">績效教練能解決哪些管理痛點？</h2>
+          <p class="text-lg text-slate-600">績效教練最常處理的，不是能力不足，而是管理節奏失衡。</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div class="rounded-2xl bg-white p-6 border border-red-100 shadow-sm">
+            <div class="text-red-400 text-2xl mb-3">✗</div>
+            <h3 class="text-lg font-bold text-navy mb-2">目標有訂，但執行沒有被持續追蹤</h3>
+            <p class="text-slate-600 text-sm leading-6">月初訂了目標，月中忘記看，月底才發現落差太大來不及補救。</p>
+          </div>
+          <div class="rounded-2xl bg-white p-6 border border-red-100 shadow-sm">
+            <div class="text-red-400 text-2xl mb-3">✗</div>
+            <h3 class="text-lg font-bold text-navy mb-2">問題累積到月底才爆發</h3>
+            <p class="text-slate-600 text-sm leading-6">沒有平時的信號收集機制，小問題拖成大問題才被看見。</p>
+          </div>
+          <div class="rounded-2xl bg-white p-6 border border-red-100 shadow-sm">
+            <div class="text-red-400 text-2xl mb-3">✗</div>
+            <h3 class="text-lg font-bold text-navy mb-2">回饋不夠即時，改善動作跟不上</h3>
+            <p class="text-slate-600 text-sm leading-6">同仁不知道哪裡需要改善，主管也沒有足夠時間逐一回饋。</p>
+          </div>
+          <div class="rounded-2xl bg-white p-6 border border-red-100 shadow-sm">
+            <div class="text-red-400 text-2xl mb-3">✗</div>
+            <h3 class="text-lg font-bold text-navy mb-2">團隊只看結果，缺少過程中的修正機制</h3>
+            <p class="text-slate-600 text-sm leading-6">沒有過程指標和節奏，追蹤只看最終數字，來不及反應。</p>
+          </div>
+        </div>
+        <div class="text-center mt-10 max-w-2xl mx-auto">
+          <p class="text-lg text-slate-700 leading-8">當主管能<strong>更早看見偏差</strong>、團隊能<strong>更快收到回饋</strong>，績效管理就不會只剩壓力，而會開始變成穩定推進成果的機制。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Who is it for -->
+    <section class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-14">
+          <p class="text-teal-600 font-semibold mb-3">適合誰</p>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-navy mb-5">哪些公司最需要績效教練？</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="rounded-3xl border border-teal-200 bg-teal-50 p-8">
+            <h3 class="text-xl font-bold text-navy mb-4">你可能在這些情況</h3>
+            <ul class="space-y-3 text-slate-700 leading-7">
+              <li>• 團隊有 KPI / OKR，但成果仍不穩定</li>
+              <li>• 主管花很多時間追進度，卻還是常常月底才發現問題</li>
+              <li>• 業務、門市或營運團隊執行落差大，難以持續改善</li>
+              <li>• 公司想把 AI 用在管理與成效提升，但不知道怎麼開始</li>
+            </ul>
+          </div>
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-8">
+            <h3 class="text-xl font-bold text-navy mb-4">績效教練切入的訊號</h3>
+            <p class="text-slate-700 leading-7">如果你的團隊常常「事情很多、會議很多、追蹤很多，但結果沒有更穩」，這通常就是績效教練適合切入的時機。</p>
+            <p class="text-slate-700 leading-7 mt-4">先從一個最常卡關的場景開始，通常比全面導入更快看到效果。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: How it works -->
+    <section class="py-20 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-14">
+          <p class="text-teal-600 font-semibold mb-3">運作方式</p>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-navy mb-5">績效教練怎麼運作？</h2>
+          <p class="text-lg text-slate-600">績效教練通常不是先從制度開始，而是先從實際管理問題開始。</p>
+        </div>
+        <div class="grid md:grid-cols-4 gap-6">
+          <div class="rounded-3xl bg-white p-6 border border-slate-200 text-center">
+            <div class="text-3xl font-extrabold text-teal-600 mb-3">1</div>
+            <h3 class="font-bold text-navy mb-2">盤點卡點</h3>
+            <p class="text-slate-600 text-sm leading-6">先盤點目前卡住的團隊、流程或場景</p>
+          </div>
+          <div class="rounded-3xl bg-white p-6 border border-slate-200 text-center">
+            <div class="text-3xl font-extrabold text-teal-600 mb-3">2</div>
+            <h3 class="font-bold text-navy mb-2">釐清節點</h3>
+            <p class="text-slate-600 text-sm leading-6">釐清目標、進度、回饋節點與改善責任</p>
+          </div>
+          <div class="rounded-3xl bg-white p-6 border border-slate-200 text-center">
+            <div class="text-3xl font-extrabold text-teal-600 mb-3">3</div>
+            <h3 class="font-bold text-navy mb-2">AI 協助追蹤</h3>
+            <p class="text-slate-600 text-sm leading-6">用 AI 整理訊號、提醒異常、補強追蹤節奏</p>
+          </div>
+          <div class="rounded-3xl bg-white p-6 border border-slate-200 text-center">
+            <div class="text-3xl font-extrabold text-teal-600 mb-3">4</div>
+            <h3 class="font-bold text-navy mb-2">主管回到判斷</h3>
+            <p class="text-slate-600 text-sm leading-6">讓主管把時間放在判斷、帶人與修正上</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Use cases -->
+    <section class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-14">
+          <p class="text-teal-600 font-semibold mb-3">適用場景</p>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-navy mb-5">哪些場景適合導入績效教練？</h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <div class="text-3xl mb-3">💼</div>
+            <h3 class="text-lg font-bold text-navy mb-2">業務團隊</h3>
+            <p class="text-slate-600 text-sm leading-6">名單跟進、成交進度、行動節奏</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <div class="text-3xl mb-3">🏪</div>
+            <h3 class="text-lg font-bold text-navy mb-2">門市/現場團隊</h3>
+            <p class="text-slate-600 text-sm leading-6">服務品質、店效、日常執行</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <div class="text-3xl mb-3">⚙️</div>
+            <h3 class="text-lg font-bold text-navy mb-2">營運團隊</h3>
+            <p class="text-slate-600 text-sm leading-6">跨部門協作、異常處理、追蹤節奏</p>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <div class="text-3xl mb-3">👔</div>
+            <h3 class="text-lg font-bold text-navy mb-2">主管層</h3>
+            <p class="text-slate-600 text-sm leading-6">一對一回饋、週會節奏、問題盤點與改善</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Expected changes -->
+    <section class="py-20 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-14">
+          <p class="text-teal-600 font-semibold mb-3">導入成效</p>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-navy mb-5">導入後通常能看到哪些改變？</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="rounded-3xl border border-slate-200 bg-white p-8">
+            <ul class="space-y-4 text-slate-700 leading-8">
+              <li class="flex items-start gap-3"><span class="text-teal-500 text-xl">✓</span> 主管更早發現問題，而不是月底才補救</li>
+              <li class="flex items-start gap-3"><span class="text-teal-500 text-xl">✓</span> 團隊更清楚每天該改善什麼</li>
+              <li class="flex items-start gap-3"><span class="text-teal-500 text-xl">✓</span> 回饋更即時，執行更穩定</li>
+              <li class="flex items-start gap-3"><span class="text-teal-500 text-xl">✓</span> 績效管理不再只靠某個主管特別會帶人</li>
+            </ul>
+          </div>
+          <div class="rounded-3xl bg-teal-50 border border-teal-100 p-8 flex items-center">
+            <p class="text-lg text-slate-700 leading-8">這些改變的核心不是管理更嚴，而是管理<strong>更清楚、更有節奏</strong>。讓團隊不是只在做事，而是持續對結果負責。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <p class="text-teal-600 font-semibold mb-3">FAQ</p>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-navy mb-5">常見問題</h2>
+        </div>
+        <div class="space-y-5">
+          <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-6 open:bg-white">
+            <summary class="font-bold text-navy cursor-pointer">一定要先有完整 KPI 系統才能做績效教練嗎？</summary>
+            <p class="mt-4 text-slate-600 leading-7">不一定。很多中小企業一開始缺的不是更多制度，而是更穩定的管理節奏與回饋機制。</p>
+          </details>
+          <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-6 open:bg-white">
+            <summary class="font-bold text-navy cursor-pointer">沒有 IT 團隊也能導入嗎？</summary>
+            <p class="mt-4 text-slate-600 leading-7">可以。關鍵不是先有多少技術能力，而是先找出最值得改善的團隊或場景。</p>
+          </details>
+          <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-6 open:bg-white">
+            <summary class="font-bold text-navy cursor-pointer">績效教練和顧問有什麼不同？</summary>
+            <p class="mt-4 text-slate-600 leading-7">顧問通常給你建議，績效教練更強調持續追蹤、回饋與改善，讓管理不只停在一次性的診斷。</p>
+          </details>
+          <details class="group rounded-2xl border border-slate-200 bg-slate-50 p-6 open:bg-white">
+            <summary class="font-bold text-navy cursor-pointer">需要多久才能看到改變？</summary>
+            <p class="mt-4 text-slate-600 leading-7">從單一團隊或場景開始的話，通常 4–6 週可以初步看見管理節奏的變化。先建立追蹤節奏，比等到制度完整才開始更重要。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Step / Cross-link -->
+    <section class="py-20 bg-slate-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-teal-600 font-semibold mb-3">下一步</p>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-navy mb-5">如果你想知道團隊目前的績效卡點在哪裡</h2>
+        <p class="text-lg text-slate-600 leading-8 mb-10">可以先從一次管理診斷開始，找出最值得先改善的地方。</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <a href="/ai-diagnosis.html" class="rounded-2xl bg-teal-600 px-8 py-4 text-white font-bold hover:bg-teal-700">預約績效管理診斷</a>
+          <a href="/digital-employee/" class="rounded-2xl border border-slate-200 px-8 py-4 font-semibold text-slate-700 hover:bg-white">也想知道數位員工 →</a>
+        </div>
+        <p class="text-sm text-slate-500">如果你現在的主要問題不是管理節奏，而是工作量與流程承接壓力，也可以先延伸了解 <a href="/digital-employee/" class="text-brand font-semibold hover:underline">數位員工</a>，看看哪些重複工作適合先交給可管理的 AI 工作角色。</p>
+      </div>
+    </section>
+  </main>
+  <footer class="border-t border-slate-200 bg-white py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-3 md:items-center md:justify-between text-sm text-slate-500">
+      <p>© 2026 CAIO AI 教練. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="/" class="hover:text-brand">首頁</a>
+        <a href="/digital-employee/" class="hover:text-brand">數位員工</a>
+        <a href="/performance-coach/" class="hover:text-brand">績效教練</a>
+        <a href="/blog/" class="hover:text-brand">Blog</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
